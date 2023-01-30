@@ -1,4 +1,4 @@
-const colors = {
+const color = {
     p: '#388e3c',
     div: '#1565c0',
     span: '#e53935',
@@ -21,11 +21,11 @@ const colors = {
 document.querySelectorAll('.tag').forEach(elemento => {
     const tagName = elemento.tagName.toLowerCase()
 
-    elemento.style.borderColor = colors.get(tagName)
+    elemento.style.borderColor = color.get(tagName)
 
     if(!elemento.classList.contains('noLabel')) {
         const label = document.createElement('label')
-        label.style.backgroundColor = colors.get(tagName)
+        label.style.backgroundColor = color.get(tagName)
         label.innerHTML = tagName
         elemento.insertBefore(label, elemento.childNodes [0])
     }
